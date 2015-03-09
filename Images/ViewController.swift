@@ -10,6 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var alien: UIImageView!
+    var counter:Int = 1
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        
+        //do{
+        
+        counter++
+            
+        let frame = UIImage(named: "frame\(counter).png")
+        
+        alien.image = frame
+        
+        if(counter==5){counter=1}
+            
+        //}while(true)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
